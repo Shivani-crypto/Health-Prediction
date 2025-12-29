@@ -52,7 +52,8 @@ def predict():
 
             # Predict
             prediction = model.predict(data)[0]
-            result = "High Risk" if prediction == 1 else "Low Risk"
+            result = "High Risk" if prediction == 0 else "Low Risk"
+
 
         except Exception as e:
             result = f"Error: {str(e)}"

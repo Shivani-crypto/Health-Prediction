@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!-- 
+Template Name: Edu365 Education HTML
+Version: 1.0.0
+Author: Webstrot
+
+-->
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zxx">
+<!--[endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>Pediatric Intensive Care Unit (PICU)</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="Edu365 Education HTML" />
+    <meta name="keywords" content="Education" />
+    <meta name="author" content="" />
+    <meta name="MobileOptimized" content="320" />
+    <!--Template style -->
+    <link rel="stylesheet" type="text/css" href="../static/css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/nice-select.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/book.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/swiper.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/venobox.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/testimonial.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/flaticon.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/owl.theme.default.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/style_II.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/responsive_II.css" />
+    <!--favicon-->
+    <link rel="shortcut icon" type="image/png" href="../static/images/favicon.png" />
+</head>
+
+<body>
+    <div id="preloader">
+        <div id="status">
+            <img src="../static/images/preloader.gif" id="preloader_image" alt="loader">
+        </div>
+    </div>
+
+    <!-- edu top header wrapper End -->
+    <!-- edu logo + navigation in one line -->
+    <div class="edu_logo_header_wrapper float_left" style="background:#fff; border-bottom:1px solid #eee;">
+        <div class="container">
+
+            <div class="header-flex"
+                style="display:flex; align-items:center; justify-content:space-between; padding:10px 0;">
+
+                <!-- Logo -->
+                <div class="edu_logo_main_wrapper">
+                    <a href="index.html" style="display:flex; align-items:center; gap:10px; text-decoration:none;">
+                        <img src="../static/images/logo.png" alt="logo" height="60" width="60">
+                        <h1 style="margin:0;"><strong>PICU</strong></h1>
+                    </a>
+                </div>
+
+                <!-- Navigation Menu -->
+                <div class="mainmenu">
+                    <ul class="main_nav_ul"
+                        style="display:flex; list-style:none; gap:30px; margin:0; align-items:center;">
+
+                        <li class="has-mega gc_main_navigation">
+                            <a href="/home" class="gc_main_navigation hover_color">Prediction</a>
+                        </li>
+
+                        <li class="has-mega gc_main_navigation">
+                            <a href="/graphs" class="gc_main_navigation hover_color">Graph</a>
+                        </li>
+
+                        <li class="has-mega gc_main_navigation">
+                            <a href="../static/Notebook.html" class="gc_main_navigation hover_color">Notebook</a>
+                        </li>
+
+                        <li class="has-mega gc_main_navigation">
+                            <a href="/" class="gc_main_navigation hover_color">LogOut</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- edu navihation header wrapper End -->
+    <!-- hs Slider Start -->
+    <!-- inner header wrapper start -->
+    <div class="page_title_section" style="position: relative; width: 100%; height: 400px; overflow: hidden;">
+
+        <!-- Background Image -->
+        <img src="../static/images/logo (4).jpg" alt="Banner Image"
+            style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+
+        <!-- CONTENT OVER IMAGE -->
+        <div style="position: absolute; top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center; color: white; z-index: 2;">
+
+            <h1 style="margin: 0; font-size: 32px; font-weight: 700; color:aliceblue">Prediction Analysis</h1>
+
+            <ul style="list-style: none; padding: 0; margin-top: 10px; font-size: 16px;">
+                <li style="display: inline; color: #fff;">
+                    <a href="#" style="color: #fff; text-decoration: none;">Home</a>
+                    &nbsp; > &nbsp;
+                </li>
+                <li style="display: inline; color: #fff;">Prediction</li>
+            </ul>
+        </div>
+
+        <!-- SVG WAVE AT BOTTOM -->
+        <svg id="deco-clouds1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20" preserveAspectRatio="none"
+            style="position: absolute; bottom: 0; left: 0; width: 100%; height: 40px; z-index: 3;">
+            <path d="M0,20 Q5,0 10,20 T20,20 T30,20 T40,10 T50,20 T60,5 T70,20 T80,15 T90,20 T100,10 L100,20 L0,20 Z"
+                fill="white" />
+        </svg>
+
+    </div>
+
+
+
+    <!-- hs Slider End -->
+    <!-- Prediction Upload Box Start -->
+    <div class="prediction-upload-box jb_cover float_left"
+        style="margin-top: 40px; padding: 30px; background: #f7f7f7; border-radius: 10px;">
+
+        {% if result %}
+        <h2>Prediction: {{ result }}</h2>
+        {% endif %}
+
+    </div>
+    <!-- Prediction Upload Box End -->
+
+    <script>
+        let dropArea = document.getElementById("drop-area");
+
+        // Prevent default behaviors
+        ["dragenter", "dragover", "dragleave", "drop"].forEach(eventName => {
+            dropArea.addEventListener(eventName, e => e.preventDefault(), false);
+            dropArea.addEventListener(eventName, e => e.stopPropagation(), false);
+        });
+
+        // Highlight on drag
+        ["dragenter", "dragover"].forEach(eventName => {
+            dropArea.addEventListener(eventName, () => dropArea.style.borderColor = "#4a90e2", false);
+        });
+
+        // Remove highlight
+        ["dragleave", "drop"].forEach(eventName => {
+            dropArea.addEventListener(eventName, () => dropArea.style.borderColor = "#999", false);
+        });
+
+        // Handle Drop
+        dropArea.addEventListener("drop", e => {
+            let files = e.dataTransfer.files;
+            handleFiles(files);
+        });
+
+        // Handle manual choose
+        document.getElementById("fileElem").addEventListener("change", function () {
+            handleFiles(this.files);
+        });
+
+        function handleFiles(files) {
+            const fileList = document.getElementById("fileList");
+            fileList.innerHTML = "Selected file: <b>" + files[0].name + "</b>";
+        }
+    </script>
+
+    <div class="edu_footer_bottom float_left">
+        <div class="container">
+            <div class="bottom_footer float_left">
+                <p>&copy;A Machine Learning Approach. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+    <!-- footer Wrapper End -->
+    <script src="../static/js/jquery-3.3.1.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/modernizr.js"></script>
+    <script src="../static/js/testimonial.js"></script>
+    <script src="../static/js/jquery.nice-select.min.js"></script>
+    <script src="../static/js/jquery.countTo.js"></script>
+    <script src="../static/js/jquery.inview.min.js"></script>
+    <script src="../static/js/swiper.min.js"></script>
+    <script src="../static/js/venobox.min.js"></script>
+    <script src="../static/js/owl.carousel.js"></script>
+    <script src="../static/js/jquery.menu-aim.js"></script>
+    <script src="../static/js/custom_II.js"></script>
+    <!-- custom js-->
+    <script>
+        $(".edu_coll_slider_tabs .nav-tabs a").click(function () {
+            var position = $(this).parent().position();
+            var width = $(this).parent().width();
+            $(".slider").css({ "left": + position.left, "width": width });
+        });
+        var actWidth = $(".edu_coll_slider_tabs .nav-tabs .active").width();
+        var actPosition = $(".edu_coll_slider_tabs .nav-tabs .active").position();
+        $(".slider").css({ "left": + actPosition.left, "width": actWidth });
+
+        // collection Slider
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            loop: !0,
+            mode: 'horizontal',
+            grabCursor: true,
+            centeredSlides: !0,
+            parallax: !0,
+            grabCursor: true,
+            effect: 'coverflow',
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 20,
+                stretch: 0,
+                depth: 90,
+                modifier: 1,
+                slideShadows: !1,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: !0
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>
